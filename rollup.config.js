@@ -12,6 +12,8 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
 import url from '@rollup/plugin-url'; // for XML/SVG files
+import html from 'rollup-plugin-html';
+
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 import { terser } from 'rollup-plugin-terser';
 // import progress from 'rollup-plugin-progress';
@@ -76,6 +78,7 @@ const config = [ {
         { src: 'src/editor/svgedit.css', dest }
       ]
     }),
+    html({ include: 'src/editor/panels/*.html' }),
     nodeResolve({
       browser: true,
       preferBuiltins: false
