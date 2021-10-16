@@ -162,6 +162,7 @@ export default {
     ungroup: 'Ungroup Elements',
     docprops: 'Document Properties',
     editor_homepage: 'SVG-Edit Home Page',
+    editor_projects: 'Select Project',
     move_bottom: 'Send to Back',
     move_top: 'Bring to Front',
     node_clone: 'Clone Node',

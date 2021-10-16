@@ -280,6 +280,7 @@ class MainMenu {
     // eslint-disable-next-line no-unsanitized/property
     template.innerHTML = `
     <se-menu id="main_button" label="SVG-Edit" src="logo.svg" alt="logo">
+        <se-menu-item id="tool_editor_projects" label="tools.editor_projects" src="logo.svg"></se-menu-item>
         <se-menu-item id="tool_import" label="tools.import_doc" src="importImg.svg"></se-menu-item>
         <se-menu-item id="tool_export" label="tools.export_img" src="export.svg"></se-menu-item>
         <se-menu-item id="tool_docprops" label="tools.docprops" shortcut="D" src="docprop.svg"></se-menu-item>
@@ -317,6 +318,13 @@ class MainMenu {
       "click",
       this.openHomePage.bind(this)
     );
+    $id("tool_editor_projects").addEventListener(
+      "click",
+      () => {
+        document
+          .getElementById("se-export-dialog")
+          .setAttribute("dialog", "open");
+    });
     $id("se-img-prop").addEventListener(
       "change",
       function(e) {
