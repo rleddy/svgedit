@@ -306,6 +306,10 @@ class MainMenu {
       "change",
       this.clickExport.bind(this)
     );
+    $id("se-project-dialog").addEventListener(
+      "change",
+      this.clickExport.bind(this)
+    );
     $id("tool_docprops").addEventListener(
       "click",
       this.showDocProperties.bind(this)
@@ -322,7 +326,7 @@ class MainMenu {
       "click",
       () => {
         document
-          .getElementById("se-export-dialog")
+          .getElementById("se-project-dialog")
           .setAttribute("dialog", "open");
     });
     $id("se-img-prop").addEventListener(

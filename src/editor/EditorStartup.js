@@ -104,6 +104,11 @@ class EditorStartup {
       exportDialog.setAttribute('id', 'se-export-dialog');
       this.$container.append(exportDialog);
       exportDialog.init(this.i18next);
+      // Project dialog added to DOM
+      const projectDialog = document.createElement('se-project-dialog');
+      exportDialog.setAttribute('id', 'se-project-dialog');
+      this.$container.append(projectDialog);
+      exportDialog.init(this.i18next);
     } catch (err) {
       console.error(err);
     }
